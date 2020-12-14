@@ -1,0 +1,10 @@
+<h2>RTT</h2>
+
+
+<p>MM/YYYY | Acquired | Used | Left</p>
+<% @user_rtts.each do |rtt| %>
+  <p><%= rtt.month %>/<%= rtt.year %> | <%= rtt.extra_hours_acquired %> | <%= rtt.extra_hours_used %> | <%= rtt.extra_hours_left %></p>
+<% end %>
+<%= form_tag 'rtt_controller', method: "post" do %>
+  <input type="submit" value="Compute next month" />
+<% end %>

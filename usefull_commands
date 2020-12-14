@@ -1,0 +1,16 @@
+Redmine plug-in developpement usefull commands
+
+Launch console:
+bundle exec ruby bin/rails console
+
+Generate migration:
+bundle exec ruby bin/rails generate redmine_plugin_model <plugin_name> <model_name>
+
+Apply migration:
+bundle exec rake redmine:plugins:migrate
+
+Rollback migration
+bundle exec rake redmine:plugins:migrate NAME=<plugin_name> VERSION=0
+
+Generate controller
+bundle exec ruby script/rails generate redmine_plugin_controller <plugin_name> <controller_name> [<actions>]

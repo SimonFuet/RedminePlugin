@@ -1,0 +1,2 @@
+module RttControllerHelper
+end
